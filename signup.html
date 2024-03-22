@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ebid</title>
+    <!-- import foreign bootstrap libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- import google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    
+    <!-- tab icon -->
+    <link rel="icon" href="images/ebidlogo.png" type="image/x-icon">
+      <link rel="shortcut icon" href="images/ebidlogo.png" type="image/x-icon">
+
+      <style>
+       .item{
+        margin: 10px;
+        text-align: center;
+       }
+       @media screen and (max-width: 768px) {
+       #last{
+        display: none;
+       }
+      }
+    input {
+    width: 300px;
+    border: none; 
+    background: none; 
+    border-bottom: 1px solid #6c757d; 
+    outline: none; 
+    color: black;
+    
+}
+
+input:focus {
+    width: 300px;
+    border: none; 
+    background: none; 
+    border-bottom: 1px solid #6c757d; 
+    outline: none; 
+    color: black;
+}
+::placeholder {
+    color: #000;
+}
+
+</style>
+</head>
+<body>
+
+   <!-- logo -->
+    <div  class="navbar" >
+        <img src="images/ebidlogo.png" width="200px" height="80px"  alt="">
+    </div>
+    
+    <section style="background-color:#fccd25;" >
+        <div class="row" >
+            <div class="col-md-6"   >
+                <div id="carouselExampleControls" class="carousel slide" style="align-self: center;margin:10px;" data-ride="carousel" data-interval="2000"  >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img width="100%" height="300px" src="images/jewelnatches.jpeg" alt="Picture 1 of 4">
+                        </div>
+                      <div class="carousel-item" >
+                        <!-- <img width="100%" height="300px" src="https://ir.ebaystatic.com/cr/v/c01/ROW-19392_Fallback_Electronics_770x270.png" alt="Picture 2 of 4"> -->
+                        <img width="100%" height="300px" src="images/electronics.jpeg" alt="Picture 2 of 4">
+                    </div>
+                      <div class="carousel-item">
+                        <!-- <img width="100%" height="300px" src="https://ir.ebaystatic.com/cr/v/c01/ROW-19393_Fallback_Moda_770x270.png" alt="Picture 4 of 4"> -->
+                        <img width="100%" height="300px" src="images/collectibles.jpeg" alt="Picture 2 of 4">
+                      </div>
+                    <div class="carousel-item">
+                        <!-- <img width="100%" height="300px" src="https://ir.ebaystatic.com/cr/v/c01/ROW-19397_Fallback_Collectibles_770x270.png" alt="Picture 4 of 4"> -->
+                        <img width="100%" height="300px" src="images/clothing.jpeg" alt="Picture 4 of 4">
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img width="100%" height="300px" src="https://ir.ebaystatic.com/cr/v/c01/ROW-19394_Fallback_Health_Beauty_770x270.png" alt="Picture 4 of 4"> -->
+                        <img width="100%" height="300px" src="images/homengarden.jpeg" alt="Picture 4 of 4">
+                    </div>
+                </div>
+                  </div>
+        
+            </div>
+                <!-- sign in -->
+                <div class="col-md-3" >
+                    <h4 style="font-weight: normal;margin-top:10px;margin-left: 10px;color:white;" >Signin</h4>
+                        <form action="/ebay/login.php" method="post" style="margin-left: 10px;">
+                            <input type="email" name="email"  placeholder="Email" required ><br><br>
+                            <input type="password" name="password" placeholder="Password"  required id=""><br><br>
+                            <select name="acctype"  id="" class="form-control" style="width: 300px;">
+                                <option value="pacc">personal account</option>
+                                <option value="bacc">business account</option>
+                             </select><br>    
+                <button type="submit" class="btn  " style="background-color: #fff;color:#6c757d;" ><b>signin</b></button>
+                        </form>
+                </div>
+
+            <!-- Signup -->
+            <div class="col-md-3" >
+                <h4 style="font-weight: normal;margin-top:10px;margin-left: 10px;color:#fff;" >Signup</h4>
+                <!-- POSTING to signup.php -->
+                    <form action="/ebay/signup.php" method="post" style="margin-left: 10px;">
+                        <input type="text" name="username" placeholder="username" class="text-dark" required ><br><br>
+                        <input type="email" name="email"  placeholder="email" required ><br><br>
+                        <input type="password" name="password" placeholder="password"  required id=""><br><br>
+                        <select name="acctype" id=""  class="form-control" style="width: 300px;">
+                            <option value="pacc">personal account</option>
+                            <option value="bacc">business account</option>
+                        </select><br>
+                        <button type="submit" class="btn  " style="background-color: #fff;color:#6c757d;" ><b>signup</b></button>
+                    </form>
+            </div>
+        </div>
+    </section>
+  
+</body>
+</html>
